@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="f_picture.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://malsup.github.com/jquery.cycle2.js"></script>
+
+
+
+	
+</head>
+<body>
+	<div id="big_pics">
+		<div class="cycle-slideshow" data-cycle-timeout=3800 data-cycle-pause-on-hover="true" style="margin-right: 10px;">
+			<div class="cycle-pager"></div>
+			<img src="images/pic1.jpg">
+			<img src="images/pic2.jpg">
+			<img src="images/pic3.jpg">
+		</div>
+
+		<div class="cycle-slideshow" data-cycle-timeout=4300 data-cycle-pause-on-hover="true">
+			<div class="cycle-pager"></div>
+			<img src="images/pic4.jpg">
+			<img src="images/pic5.jpg">
+			<img src="images/pic6.jpg">
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		function sendData(e){
+			
+			var str=e.src;
+			var strs = str.split("/");
+
+			var imgDst;
+			var imgDst2;
+
+			for(var i=0; i<strs.length;i++){
+				if(i==strs.length-2){
+					imgDst=strs[i]+"/";
+				}
+				if(i==strs.length-1){
+					imgDst2=strs[i];
+				}
+			}
+
+			imgDst = imgDst+imgDst2;
+			
+			
+			window.open('getData.php?imgDst='+imgDst, '_self');
+		}
+	</script>
+
+
+	<div id="medium_pics">
+		<div id="medium_pics_1">
+			
+		<img src="images/pic1.jpg" onclick="sendData(this)" style="cursor: pointer;">
+			
+				
+		</div>
+		<div id="medium_pics_2">
+			<img src="images/pic2.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="medium_pics_3">
+			<img src="images/pic3.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="medium_pics_4">
+			<img src="images/pic4.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="medium_pics_5">
+			<img src="images/pic5.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+
+		<div id="medium_pics_6">
+			<img src="images/pic6.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+	</div>
+
+	<p class="more">
+		<span id="more">more</span>
+		
+	</p>
+
+	
+
+
+	<div class="small_pics">
+		<div id="small_pics_1" style="margin-right: 10px;">
+				<img src="images/s_pic1.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_2" style="margin-right: 10px;">
+				<img src="images/s_pic2.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_3" style="margin-right: 10px;">
+				<img src="images/s_pic3.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_4" style="margin-right: 10px;">
+				<img src="images/s_pic4.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_5">
+				<img src="images/s_pic5.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+	</div>
+
+	<div class="small_pics">
+		<div id="small_pics_6" style="margin-right: 10px;">
+				<img src="images/s_pic6.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_7" style="margin-right: 10px;">
+				<img src="images/s_pic7.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_8" style="margin-right: 10px;">
+				<img src="images/s_pic8.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_9" style="margin-right: 10px;">
+				<img src="images/s_pic9.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_10">
+				<img src="images/s_pic10.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+	</div>
+
+	<div class="small_pics">
+		<div id="small_pics_11" style="margin-right: 10px;">
+			<img src="images/s_pic11.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_12" style="margin-right: 10px;">
+			<img src="images/s_pic12.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_13" style="margin-right: 10px;">
+			<img src="images/s_pic13.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_14" style="margin-right: 10px;">
+			<img src="images/s_pic14.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_15">
+			<img src="images/s_pic15.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+	</div>
+
+	<div class="small_pics">
+		<div id="small_pics_16" style="margin-right: 10px;">
+			<img src="images/s_pic16.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_17" style="margin-right: 10px;">
+			<img src="images/s_pic17.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_18" style="margin-right: 10px;">
+			<img src="images/s_pic18.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_19" style="margin-right: 10px;">
+			<img src="images/s_pic19.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_20">
+			<img src="images/s_pic20.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+	</div>
+
+	<div class="small_pics">
+		<div id="small_pics_21" style="margin-right: 10px;">
+				<img src="images/s_pic21.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_22" style="margin-right: 10px;">
+				<img src="images/s_pic22.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_23" style="margin-right: 10px;">
+				<img src="images/s_pic23.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_24" style="margin-right: 10px;">
+				<img src="images/s_pic24.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+		<div id="small_pics_25">
+				<img src="images/s_pic25.jpg" onclick="sendData(this)" style="cursor: pointer;">
+		</div>
+	</div>
+
+	<div>
+		
+	</div>
+
+
+
+	
+
+
+</body>
+</html>

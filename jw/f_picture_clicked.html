@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+	table.clicked {
+		width: 992px;
+	    border-collapse: separate;
+	    border-spacing: 0;
+	    text-align: left;
+	    line-height: 1.5;
+	    border-top: 1px solid #ccc;
+	    border-left: 1px solid #ccc;
+	  	margin : 20px 10px;
+	}
+	table.clicked th {
+	    width: 288.6px;
+	    padding: 10px;
+	    font-weight: bold;
+	    border-right: 1px solid #ccc;
+	    border-bottom: 1px solid #ccc;
+	    border-top: 1px solid #fff;
+	    border-left: 1px solid #fff;
+	    background: #eee;
+	}
+	table.clicked td {
+		padding: 10px;
+		margin: 0px;
+	    width: 703.4px;
+	    border-right: 1px solid #ccc;
+	    border-bottom: 1px solid #ccc;
+	}
+
+	input{
+		border:0px;
+		width: 350px;
+		padding: 10px;
+	}
+	input:focus, textarea{
+		outline: none;
+
+	}
+
+	textarea{
+		border:0px;
+		width: 350px;
+		padding: 0px;
+		resize: none;
+	}
+	</style>
+	<link rel="stylesheet" type="text/css" href="f_picture_clicked.css">
+</head>
+
+
+<body>
+
+	<table class="clicked">
+	    <tr>
+	        <th scope="row">이름</th>
+	        <td>sam</td>
+	    </tr>
+	    <tr>
+	        <th scope="row">품종</th>
+	        <td>도베르만</td>
+	    </tr>
+	    <tr>
+	        <th scope="row">날짜</th>
+	        <td>20180622</td>
+	    </tr>
+	    <tr>
+	    	<th scope="row">내용</th>
+	        <td><textarea rows="8" readonly="readonly">너무너무 귀엽지</textarea></td>
+	    </tr>
+	</table>
+
+	<img id="img1" src="images/pic1.jpg">
+	<img id="img2" src="">
+	<img id="img3" src="">
+
+
+</body>
+</html>

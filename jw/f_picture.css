@@ -1,0 +1,126 @@
+*{
+	margin: 0; 
+	padding: 0;
+}
+body{
+	width: 992px; 
+	/*border:3px solid black;*/
+}
+
+
+
+#big_pics{
+	width: 100%;
+	height: 358px;
+
+}
+
+#big_pics img{
+	width: 491px; 
+	height: 358px;
+	
+}
+
+#medium_pics{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 100%;
+	height: 200px;
+}
+
+#medium_pics div{
+	/*border:1px solid red;*/
+	float: left;
+	width: 165.33px; 
+	height: 100%;
+	/*margin-right: 1px;*/
+
+}
+
+#medium_pics div img{
+	width: 100%; 
+	height: 100%;
+}
+
+
+
+.more{
+	text-align: center;
+	padding: 30px;
+	margin-top: 20px;
+
+}
+
+
+#more{
+	
+	padding: 13px 26px;
+	border:2px solid black;
+	border-radius: 10px;
+	background-color: #f9f9f9;
+
+}
+
+
+.small_pics{
+	margin-top: 20px;
+	/*border: 2px solid purple;*/
+	width: 100%;
+	height: 200px;
+	
+}
+
+.small_pics div{
+	/*border:1px solid red;*/
+	float: left;
+	width: 190.4px; 
+	height: 200px;
+}
+
+.small_pics div img{
+	width: 100%;
+	height: 100%;
+}
+
+.cycle-slideshow, .cycle-slideshow * { 
+	-webkit-box-sizing: border-box; -moz-box-sizing: 
+	border-box; box-sizing: border-box; 
+}
+
+
+.cycle-slideshow { float: left; padding: 0; position: relative;}
+
+/* slideshow images (for most of the demos, these are the actual "slides") */
+.cycle-slideshow img { 
+    /* 
+    some of these styles will be set by the plugin (by default) but setting them here
+    helps avoid flash-of-unstyled-content
+    */
+    position: absolute; top: 0; left: 0;
+    width: 100%; padding: 0; display: block;
+}
+
+/* in case script does not load */
+.cycle-slideshow img:first-child {
+    position: static; z-index: 100;
+}
+
+/* pager */
+.cycle-pager { 
+    width: 100%; z-index: 500; position: absolute;
+	bottom: 1px; text-align: center; overflow: hidden;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #000000;}
+.cycle-pager > * { cursor: pointer;}
+
+
+
+
+
+

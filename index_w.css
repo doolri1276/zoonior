@@ -1,0 +1,197 @@
+
+#page{
+	min-width: 600px;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 10;
+	border-right: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	
+}
+
+header{
+	position: fixed;
+	max-width: 1200px;
+	background-color: white;
+	z-index: 3;
+}
+
+#header_content{
+	position: relative;
+}
+
+#top_menu{
+	padding-left: 30px;
+}
+
+header li{
+	padding-left: 30px;
+}
+
+
+header li img{
+	display: none;
+}
+
+header #menu{
+	display: none;
+}
+
+
+
+
+
+nav#mobile{
+	display: none;
+}
+
+nav{
+	/*background-color: yellow;*/
+	float: left;
+	width: 200px;
+	height: 100%;
+	margin-top: 50px;
+	z-index: -10;
+}
+
+#nav_contents{
+	width: 500px;
+	padding-top: 20px;
+	padding: 20px;
+	max-width: 160px;
+}
+
+nav #logo{
+	display: block;
+	width: 120px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+
+}
+
+nav #logo img{
+
+}
+
+nav li{
+	line-height: 30px;
+}
+
+nav a{
+	color: black;
+	
+}
+
+nav .hr{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-right: 40px;
+}
+
+nav ul.lists{
+	font-size: 13px;
+	text-indent: 15px;
+/*	display: none;*/
+}
+
+
+.comm{
+	background-color: white;
+	line-height: 30px;
+	/*border-bottom: 2px solid #dddddd;*/
+	text-indent: 5px;
+}
+
+
+
+
+
+
+
+
+article{
+	/*background-color: lightgreen;*/
+
+	width: 100%;
+	height: 100%;
+	max-width: 992px;
+	padding-left: 200px;
+
+	min-height: 1200px;
+	padding-top: 46px;
+	
+}
+
+#article_contents{
+	width: 100%;
+	
+}
+
+#iframe{
+	width: 992px;
+	height: 100%;
+	min-height: 1250px;
+	/*background-color: blue;*/
+	border: 0;
+	scroll-behavior: unset;
+	border-left: 1px solid #dddddd;
+}
+
+footer{
+	/*background-color: skyblue;*/
+	clear: both;
+	border-top: 1px solid #dddddd;
+
+}
+
+#footer_contents{
+	width: 100%;
+	padding: 20px;
+}
+
+footer #footer_logo{
+	margin-left: 30px;
+	margin-right: 70px;
+	float: left;
+	margin-bottom: 30px;
+}
+
+footer ul{
+	margin-bottom: 10px;
+}
+
+footer li{
+	display: inline;
+	margin-right: 15px;
+}
+
+footer a{
+	color: black;
+}
+
+footer p{
+
+	word-wrap: break-word;
+	margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ZOONIOR</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<link rel="stylesheet" type="text/css" href="index_w.css" media="(min-width:992px)">
+
+	<link rel="stylesheet" type="text/css" href="index_t.css" media="(max-width:991px)">
+
+	<link rel="stylesheet" type="text/css" href="index_m.css" media="(max-width:600px)">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script src="index.js"></script>
+
+</head>
+<body onresize="iframeLoaded()">
+
+	<div id="page">
+		<header>
+
+			<div id="header_content">
+
+				<ul id="top_menu">
+					<li><img src="images/sns_kakaostory.png"></li>
+					<li><a href="index.html">ZOONIOR</a></li>
+
+				</ul>
+
+				<img id="menu" src="images/sns_kakaostory.png">
+				
+			</div>
+			
+			
+
+		</header>
+		<nav id="web">
+
+			<div id="nav_contents">
+				<div id="logo">
+					<img src="http://cfoot.co.kr/web/upload/ruben/images/logo.png" width="120">
+				</div>
+
+				<ul id="main_menu">
+
+					<li class="main1"><a href="sy/index.php?kind='강아지'" target="iframe">강아지 분양</a></li>
+					<li class="main1"><a href="sy/index.php?kind='고양이'" target="iframe">고양이 분양</a></li>
+					<li class="main1"><a href="sy/index.php?kind=''" target="iframe">기타동물분양</a></li>
+					<li class="main1"><a href="sy/index.php?rgyou='yu'" target="iframe">유료분양</a></li>
+
+<!-- 					<li class="hr">-</li> -->
+
+					<li class="comm"><strong>애견 지식인</strong>
+						<ul class="lists">
+							<li><a href="kind/index.php" target="iframe">백과사전</a></li>
+							<li><a href="#">건강</a></li>
+							<li><a href="#">상식</a></li>
+							<li><a href="#">교육</a></li>
+						</ul>
+					</li>
+
+					<li  class="comm"><strong>고양이 지식인</strong>
+						<ul class="lists">
+							<li><a href="#">백과사전</a></li>
+							<li><a href="#">건강</a></li>
+							<li><a href="#">상식</a></li>
+							<li><a href="#">교육</a></li>
+						</ul>
+					</li>
+
+					<li  class="comm"><strong>기타동물 지식인</strong>
+						<ul class="lists">
+							<li><a href="#">백과사전</a></li>
+							<li><a href="#">건강</a></li>
+							<li><a href="#">상식</a></li>
+							<li><a href="#">교육</a></li>
+						</ul>
+					</li>
+<!-- 					<li class="hr">-</li> -->
+					<li class="main2"><a href="#">자유게시판</a></li>
+					<li class="main2"><a href="#">품종정보</a></li>
+
+					
+
+					<li class="main3"><a href="notice/index.php" target="iframe">공지사항</a></li>
+					<!-- <li class="main3"><a href="#">Q&A</a></li> -->
+
+				</ul>
+			</div>
+
+		</nav>
+
+		<nav id="mobile">
+
+			<div id="nav_contents">
+				<div id="logo">
+					<img src="http://cfoot.co.kr/web/upload/ruben/images/logo.png" width="120">
+				</div>
+
+				<ul id="main_menu2">
+
+					<li class="main1"><a href="sy/index.php?kind='강아지'" target="iframe">강아지 분양</a></li>
+					<li class="main1"><a href="sy/index.php?kind='고양이'" target="iframe">고양이 분양</a></li>
+					<li class="main1"><a href="sy/index.php?kind=''" target="iframe">기타동물분양</a></li>
+					<li class="main1"><a href="sy/index.php?rgyou='yu'" target="iframe">유료분양</a></li>
+
+					<li><a href="#"></a> </li>
+
+<!-- 					<li class="hr">-</li> -->
+
+					<li class="comm">애견 지식인 v
+						<ul class="lists">
+							<li><a href="kind/index.php" target="iframe">백과사전</a></li>
+							<li><a href="#">건강</a></li>
+							<li><a href="#">상식</a></li>
+							<li><a href="#">교육</a></li>
+						</ul>
+					</li>
+
+					<li  class="comm">고양이 지식인 v
+						<ul class="lists">
+							<li><a href="#">백과사전</a></li>
+							<li><a href="#">건강</a></li>
+							<li><a href="#">상식</a></li>
+							<li><a href="#">교육</a></li>
+						</ul>
+					</li>
+
+					<li  class="comm">기타동물 지식인 v
+						<ul class="lists">
+							<li><a href="#">백과사전</a></li>
+							<li><a href="#">건강</a></li>
+							<li><a href="#">상식</a></li>
+							<li><a href="#">교육</a></li>
+						</ul>
+					</li>
+					<li> <a href="#"></a></li>
+<!-- 					<li class="hr">-</li> -->
+					<!-- <li class="main2"><a href="#">자유게시판</a></li> -->
+
+					<li class="main3"><a href="notice/index.php" target="iframe">공지사항</a></li>
+					<!-- <li class="main3"><a href="#">Q&A</a></li> -->
+
+				</ul>
+			</div>
+
+		</nav>
+		<article>
+		<!-- 	<div id="article_contents"> -->
+				<iframe id="iframe"name="iframe" width="100vw" scrolling="no" onload="autoResize(this)" src="sy/index.php?kind='강아지'" target="iframe">
+				
+			</iframe>
+			<!-- </div> -->
+			
+
+		</article>
+		<footer>
+			<div id="footer_contents">
+				<img id="footer_logo" src="http://cfoot.co.kr/web/upload/ruben/images/logo.png" alt="logo" width="120" >
+
+				<ul>
+					<li><a href="#">개인정보 취급방침</a></li>
+					<li><a href="#">제휴문의 & 광고문의</a></li>
+					<li><a href="#">정액제 해지</a></li>
+					<li><a href="#">이메일주소 무단수집 거부</a></li>
+				</ul>
+
+				<p>
+				강아지무료분양 고양이분양 주세요닷컴ㅣ상호 : (주)상상유니버스 ㅣ사업자번호 : 898-87-00897ㅣ대표:이종남
+주소 : 서울시 구로구 디지털로 34길ㅣ통신판매업 : 제 2015-서울강북-0378호 ㅣ개인정보관리자:강용석<a href="#">상담문의[상담문의하기]</a> 고객센터 : 02-6494-0330 ㅣ주세요닷컴은 직거래사이트로 직접분양은 하지않습니다. 
+Copyright (c) 2008 Zooseyo All Rights Reserved.  <a href="#">master@zooseyo.com</a>
+			</p>
+			</div>
+		</footer>
+
+		<div id="black">
+			<p>ajfoiejofew</p>
+		</div>
+	</div>
+
+
+</body>
+</html>

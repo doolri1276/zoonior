@@ -1,0 +1,34 @@
+* {margin: 0px;padding: 0px;}
+
+article{width: 70%; margin-left: auto; margin-right: auto; padding: 10px;}
+#one_board{margin-left: 20px; font-size: 30px;float: left;width: 70%;margin: 10px 0px; margin-left: auto; margin-right: auto;text-align: center;}
+#write{margin-right: 30px;margin-top: 10px;}
+#write a{text-decoration: none;}
+#write a:hover{background-color: aqua;}
+#boardList{
+	width: 70%;
+	margin-top: 20px; 
+	margin-bottom: 20px;
+	margin-left: auto;
+ 	margin-right: auto;
+ 	padding: 30px;
+}
+table{border-collapse: collapse;}
+td, th{border:1px solid;padding: 5px 10px;}
+th{font-size: 16px; color: black;}
+#boardList .no {width: 60px; text-align: center;}
+
+#boardList .title {width: 240px; text-align: center;}
+#boardList .title a{text-decoration: none;}
+#boardList .kind {width: 100px; text-align: center;}
+#boardList .kinds {width: 80px; text-align: center;}
+#boardList .local {width: 80px; text-align: center;}
+#boardList .date {width: 100px; text-align: center;}
+
+#boardList .paging {text-align: center;}
+#boardList .paging li {display: inline-block;border-radius: 10px; height: 20px; margin: 0 5px; padding: 0 5px; border: 1px solid #666; background: white; line-height: 21px;}
+#boardList .paging li a{text-decoration: none;} 
+#boardList .paging li.current,
+#boardList .paging li:hover {background: gray;}
+#boardList .paging li.current,
+#boardList .paging li:hover a { color: white;}

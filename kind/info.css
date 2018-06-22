@@ -1,0 +1,56 @@
+
+*{
+	margin: 0; padding: 0;
+}
+
+header{
+	height: 60px;
+	margin: 10px;
+}
+
+aside#left{
+	width: 200px;
+	margin-top: 20px;
+	float: left;
+}
+
+#left h4{
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.lists{
+	font-size: 13px;
+	list-style: none;
+	text-indent: 15px;
+	display: none;
+}
+
+.comm li:hover>.lists{
+	display: block;
+}
+
+.comm{
+	background-color: white;
+	line-height: 30px;
+	border-bottom: 2px solid #dddddd;
+	text-indent: 5px;
+}
+
+#left a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	display: block;
+}
+
+.lists li:hover{
+	background-color: silver;
+}
+
+article h4{
+	margin: 20px;
+	padding-left: 250px;
+}
+
+

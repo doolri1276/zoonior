@@ -2,6 +2,32 @@
 
 	include "db.php";
 
+  //페이지 관리 시작..
+
+  $pageNum=($_GET['page'])?$_GET['page']:1;
+  $list=($_GET['list'])?$_GET['list']:10;//한페이지에 나오는 글 갯수
+  $by=($_GET['by'])?$_GET['by']:0;//0: 최신순, 1: 조회수
+
+
+  $b_pageNum_list=10;//
+  $block=ceil($pageNum/$b_pageNum_list);
+
+  $b_start_page=(($block-1)*$b_pageNum_list)+1;
+  $b_end_page=$b_start_page+$b_pageNum_list-1;
+
+  
+  
+  $cnt=mq('select count(*) as cnt from notice');
+  $cntresult=$cnt->fetch_array();
+
+  $total_count=$cntresult['cnt'];
+  $total_page=ceil($total_count/$list);
+
+  if($b_end_page>$total_page)
+    $b_end_page=$total_page;
+
+  $limit=($pageNum-1)*$list;
+
  ?>
 
  <!DOCTYPE html>
@@ -13,6 +39,8 @@
  	media="(min-width:661px)">
 
  	<link rel="stylesheet" type="text/css" href="index_m.css" media="(max-width:660px)">
+
+  <link rel="stylesheet" type="text/css" href="../sy/zoo_write.css">
 
  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -41,15 +69,15 @@
 
  			<div id="notice_cnt">
  				<p class="top">게시물 : </p>
- 				<p class="top" id="notice_cnt">37</p>
+ 				<p class="top" id="notice_cnt"><?=$total_count?></p>
  				<p class="top">개</p>
  			</div>
 
  			<div id="show">
  				<ul>
- 					<li><a href="#" class="top" >최신순</a></li>
+ 					<li><a href="index.php?by=<?echo(0)?>" class="top" >최신순</a></li>
  					<li class="top"><a href="#">|</a></li>
- 					<li class="top"><a href="#">조회수</a></li>
+ 					<li class="top"><a href="index.php?by=<?echo(1)?>">조회수</a></li>
  				</ul>
  				
  			</div>
@@ -77,9 +105,15 @@
  				<!-- </spanead> -->
 
  				<?php 
+          
 
- 					$sql=mq("select * from notice order by noticeNO desc");
 
+          if($by==0){
+            $sql=mq("select * from notice order by noticeNO desc limit $limit, $list");
+          }else if($by==1){
+            $sql=mq("select * from notice order by visited desc limit $limit, $list");
+          }
+          
  					while ($board=$sql->fetch_array()) {
  						$title=$board[title];
  						if(strlen($title)>30){
@@ -117,6 +151,56 @@
 				
 			
  		</div>
+
+    <div class="paging">
+      <ul>
+      <?php 
+      if($pageNum <= 1){?><!-- 페이지 번호가 1보다 작거나 같다면 -->
+        <li class="page page_start"><a href="#">처음</a></li>
+
+       <?}else{?>
+        <li class="page page_start"><a href="index.php?page=&list=<?=$list?>&by=<?=$by?>">처음</a></li>
+      <?}
+
+      if($block <= 1){?><!-- block이 1보다 작거나 같으면 -->
+      <!-- 거꾸로 못가니까 아무 표시도 안함. -->
+
+      <?}else{?><!-- block이 1보다 크다면.. -->
+        <li class="page page_prev"><a href="index.php?page=<?=$b_start_page-1?>&list=<?=$list?>&by=<?=$by?>">이전</a></li>
+      <?}
+
+      //$b_start_page를 $j의 초기값으로 설정
+      //$b_end_page보다 작거나 같을 때까지 for문 돌리기
+      //$j하나씩 증가시키기
+
+      for($j=$b_start_page;$j<=$b_end_page;$j++){
+        if($pageNum==$j){//pageNum과 j가 같으면 현재 페이지 이므로
+      ?>
+        <li class="page current"><?=$j?></li><!-- 링크 걸지 않고 그냥 현재 페이지만 출력 -->
+      <?}else{?><!-- 서로 다르다면.. -->
+        <li class="page"><a href="index.php?page=<?=$j?>&list=<?=$list?>&by=<?=$by?>"><?=$j?></a></li>
+        <?
+        }
+      }
+
+      $total_block=ceil($total_page/$b_pageNum_list);
+
+      if($block >= $total_block){?><!-- block과 총 block개수가 값이 같다면.. -->
+      <!-- 맨 마지막 블럭이므로 다음 링크 버튼이 필요 없어서 보여주지 않는다. -->
+
+      <?}else{?><!-- 그게 아니라면?!?!? -->
+        <li class="page page_next"><a href="index.php?page=<?=$b_end_page+1?>&list=<?=$list?>&by=<?=$by?>">다음</a></li>
+      <?}
+
+      if($pageNum >= $total_page){?>
+        <li class="page page_end"><a href="#">끝</a></li>
+      <?}else{?>
+        <li class="page page_end"><a href="index.php?page=<?=$total_page?>&
+          list=<?=$list?>&by=<?=$by?>">끝</a></li>
+      <?}
+
+      ?>
+    </div>
  	</div>
 
 

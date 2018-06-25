@@ -7,6 +7,8 @@
 	$sql=mq("select * from notice where noticeNO='$noticeNO'");
 	$row=$sql->fetch_array();
 
+	
+
  ?>
 
  <!DOCTYPE html>
@@ -51,6 +53,49 @@
 
 			<div class="tr">
 				<span class="contents"><?php echo nl2br($row['contents'])?></span>
+			</div>
+		</div>
+
+		<div class="move_page">
+			<div class="tr"></div>
+			<div class="tr">
+				<?
+				$prevNO=$noticeNO+1;
+	
+				$prev=mq("select title from notice where noticeNO='$prevNO'");
+				if($prev){
+					$prevRow=$prev->fetch_array();
+					$prevTitle=$prevRow['title'];
+				}
+
+				if($prevNO>0&&$prevTitle){?>
+					<span class="info stxt"><a href="detail.php?no=<?=$prevNO?>">∧ 이전페이지</a></span>
+					<span class="title"><a href="detail.php?no=<?=$prevNO?>">
+					<?=$prevTitle?></a></span>
+				<?}else{?>
+					<span class="info stxt">∧ 이전페이지</a></span>
+					<span class="title stxt">마지막 페이지 입니다.</span>
+				<?}?>
+				
+			</div>
+			<div class="tr">
+				<?
+				$nextNO=$noticeNO-1;
+	
+				$next=mq("select title from notice where noticeNO='$nextNO'");
+				if($next){
+					$nextRow=$next->fetch_array();
+					$nextTitle=$nextRow['title'];
+				}
+
+				if($nextNO>0&&$nextTitle){?>
+					<span class="info stxt"><a href="detail.php?no=<?=$nextNO?>">∨ 다음페이지</a></span>
+					<span class="title"><a href="detail.php?no=<?=$nextNO?>">
+					<?=$nextTitle?></a></span>
+				<?}else{?>
+					<span class="info stxt">∨ 다음페이지</a></span>
+					<span class="title stxt">마지막 페이지 입니다.</span>
+				<?}?>
 			</div>
 		</div>
 

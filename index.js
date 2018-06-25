@@ -41,8 +41,10 @@ $(document).ready(function (){
 	// });
 
 	$('ul#main_menu>li.comm').on('click',function(){
-		alert('눌렸다');
-		$(this).children().eq(1).slideToggle(400);
+		if($(this).is('.sub_li')===false){
+			$(this).children().eq(1).slideToggle(400);	
+		}
+		
 	});
 
 

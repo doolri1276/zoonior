@@ -17,7 +17,7 @@
 
   
   
-  $cnt=mq('select count(*) as cnt from notice');
+  $cnt=mq('select count(*) as cnt from faq');
   $cntresult=$cnt->fetch_array();
 
   $total_count=$cntresult['cnt'];
@@ -34,11 +34,11 @@
  <html lang="ko">
  <head>
  	<meta charset="utf-8">
- 	<title>NOTICE</title>
- 	<link rel="stylesheet" type="text/css" href="index_tw.css"
+ 	<title>FAQ</title>
+ 	<link rel="stylesheet" type="text/css" href="../notice/index_tw.css"
  	media="(min-width:661px)">
 
- 	<link rel="stylesheet" type="text/css" href="index_m.css" media="(max-width:660px)">
+ 	<link rel="stylesheet" type="text/css" href="../notice/index_m.css" media="(max-width:660px)">
 
   <link rel="stylesheet" type="text/css" href="../sy/zoo_write.css">
 
@@ -62,7 +62,7 @@
  <body>
 
  	<div id="inner_page">
- 		<h2>공지사항</h2>
+ 		<h2>FAQ</h2>
 
 
  		<div id="top">
@@ -109,9 +109,9 @@
 
 
           if($by==0){
-            $sql=mq("select * from notice order by noticeNO desc limit $limit, $list");
+            $sql=mq("select * from faq order by faqNO desc limit $limit, $list");
           }else if($by==1){
-            $sql=mq("select * from notice order by visited desc limit $limit, $list");
+            $sql=mq("select * from faq order by visited desc limit $limit, $list");
           }
           
  					while ($board=$sql->fetch_array()) {
@@ -126,8 +126,8 @@
  				 <!-- <tbody> -->
  				 	<div class="tr">
  				 		<span class="s1">
- 				 			<span class="noticeNO stxt"><?php echo "$board[noticeNO]"; ?></span>
- 				 			<span class="title"><a href="detail.php?no=<?php echo $board[noticeNO];?>"><?php echo "$title"; ?></a></span>
+ 				 			<span class="noticeNO stxt"><?php echo "$board[faqNO]"; ?></span>
+ 				 			<span class="title"><a href="detail.php?no=<?php echo $board[faqNO];?>"><?php echo "$title"; ?></a></span>
  				 		</span>
 
  				 		<span class="s2">

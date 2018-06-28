@@ -1,5 +1,5 @@
 <?php 
-	require_once("db.php");
+	require_once("../notice/db.php");
 	$faqNO=$_GET['no'];
 
 	//echo "$faqNO";
@@ -19,10 +19,10 @@
 	<!-- <link rel="stylesheet" href="normalize.css" />
 	<link rel="stylesheet" href="board.css" /> -->
 
-		<link rel="stylesheet" type="text/css" href="index_tw.css"
+		<link rel="stylesheet" type="text/css" href="../notice/index_tw.css"
  	media="(min-width:661px)">
 
- 	<link rel="stylesheet" type="text/css" href="index_m.css" media="(max-width:660px)">
+ 	<link rel="stylesheet" type="text/css" href="../notice/index_m.css" media="(max-width:660px)">
 
  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

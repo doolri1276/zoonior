@@ -14,10 +14,6 @@ li{
 	display: inline;
 }
 
-div#inner_page{
-	padding: 15px;
-
-}
 
 h2{
 	border: 1px solid #eee;
@@ -85,6 +81,7 @@ span.noticeNO{
 }
 
 span.title{
+	text-align: left;
 	font-size: 0.9em;
 	width: 82.5%;
 }
@@ -226,4 +223,12 @@ label{
 
 label.cb{
 	width: 80px;
+}
+
+.tel{
+	width: 70px;
+}
+
+input.email{
+	width: 120px;
 }

@@ -19,7 +19,7 @@
 	<!-- <link rel="stylesheet" href="normalize.css" />
 	<link rel="stylesheet" href="board.css" /> -->
 
-		<link rel="stylesheet" type="text/css" href="index_tw.css"
+	<link rel="stylesheet" type="text/css" href="index_tw.css"
  	media="(min-width:661px)">
 
  	<link rel="stylesheet" type="text/css" href="index_m.css" media="(max-width:660px)">

@@ -64,14 +64,14 @@ nav{
 
 nav #logo{
 	display: block;
-	width: 120px;
+	width: 200px;
 	margin: 0 auto;
 	margin-bottom: 30px;
 
 }
 
 nav #logo img{
-
+	width: 170px;
 }
 
 nav li{
@@ -116,7 +116,7 @@ article{
 	width: 100%;
 	height: 100%;
 	max-width: 992px;
-	padding-left: 206px;
+	padding-left: 207px;
 
 	min-height: 1200px;
 	padding-top: 46px;
@@ -160,6 +160,7 @@ footer #footer_logo{
 	margin-left: 30px;
 	margin-right: 70px;
 	float: left;
+	width: 200px;
 	margin-bottom: 30px;
 }
 

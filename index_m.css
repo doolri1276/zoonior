@@ -67,19 +67,10 @@ nav ul.lists{
 }
 
 article{
-	width: 100%;
-	/*background-color: lightgreen;*/
-
-	min-height: 700px;
-}
-
-#iframe{
 	display: block;
 	width: 100%;
 	border: 0;
 	min-height: 650px;
-	/*background-color: blue;*/
-
 }
 
 footer{
@@ -173,3 +164,226 @@ ul.lists{
 
 
 
+
+/*///////////////////////////////////////////////*/
+
+
+
+h2{
+	border: 1px solid #eee;
+	line-height: 34px;
+	width: 198px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: black;
+	margin-bottom: 30px;
+	margin-top: 50px;
+}
+
+
+#top{
+	line-height: 45px;
+	border: 1px solid #f0f0f0;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+}
+
+#top>div{
+	display: inline-block;
+}
+
+#top p,#top a{
+	font-size: 11px;
+}
+
+#notice_cnt p{
+	display: inline;
+}
+
+#notice_cnt li{
+	display: inline;
+}
+
+#show{
+	position: relative;
+	text-align: right;
+}
+
+div.list_table span{
+	display: inline-block;
+	line-height: 30px;
+}
+
+div.img{
+	width: 100%;
+}
+
+div.img img{
+	width: 100%;
+
+}
+
+
+
+
+span.noticeNO{
+
+	width: 12.5%;
+}
+
+span.title{
+	text-align: left;
+	font-size: 0.9em;
+	width: 82.5%;
+}
+
+span.name{
+	display: inline-block;
+	width:30%;
+}
+
+span.date{
+	display: inline-block;
+	width: 32.5%;
+	text-align: center;
+}
+
+span.visited{
+	display: inline-block;
+	width: 30%;
+	text-align: right;
+}
+
+span.text{
+	display: inline-block;
+	width: 49%;
+}
+
+span.input{
+	display: inline-block;
+	width: 49%;
+}
+
+span.input[type=text]{
+	width: 150px;
+}
+
+span.input select{
+	width: 150px;
+	line-height: 20px;
+	height: 20px;
+}
+
+div.tr textarea{
+	width: 100%;
+	margin: 10px;
+	resize: vertical;
+}
+
+
+span.th{
+	font-weight: bold;
+	color: black;
+	font-size: 0.8em;
+}
+
+div.thr{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border-bottom: 2px solid black;
+	max-width: 880px;
+	padding: 10px;
+}
+
+div.tr{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border-bottom: 1px solid #dddddd;
+	max-width: 880px;
+	padding: 10px;
+}
+
+div.list_table{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+span.s1{
+	width: 100%;
+}
+
+span.s2{
+	width: 100%;
+}
+
+span.s3{
+	display: inline-block;
+	width: 31%;
+	color: #444444;
+	font-size: 0.8em;
+}
+
+span.s4{
+	display: inline-block;
+	width: 90%;
+	margin: 10px;
+	border: 1px solid #dddddd;
+}
+
+span.full{
+	width: 100%;
+	text-align: center;
+}
+
+span.s4 img{
+	width: 100%;
+}
+
+div.half{
+	border-top: 1px solid #dddddd;
+}
+span.half{
+	width:48%; 
+	font-size: 13px;
+	text-align: center;
+
+}
+
+span.right{
+	text-align: right;
+}
+
+span.center{
+	text-align: center;
+}
+
+span.stxt{
+	color: #555555;
+	font-size: 0.8em;
+}
+
+label{
+	width: 100%;
+	font-size: 13px;
+	display: inline-block;
+	
+}
+
+label.cb{
+	width: 80px;
+}
+
+.tel{
+	width: 70px;
+}
+
+input.email{
+	width: 120px;
+}

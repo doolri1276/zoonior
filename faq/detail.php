@@ -1,10 +1,10 @@
 <?php 
-	require_once("db.php");
-	$noticeNO=$_GET['no'];
+	require_once("../notice/db.php");
+	$faqNO=$_GET['no'];
 
-	//echo "$noticeNO";
+	//echo "$faqNO";
 
-	$sql=mq("select * from notice where noticeNO='$noticeNO'");
+	$sql=mq("select * from faq where faqNO='$faqNO'");
 	$row=$sql->fetch_array();
 
 	
@@ -19,10 +19,10 @@
 	<!-- <link rel="stylesheet" href="normalize.css" />
 	<link rel="stylesheet" href="board.css" /> -->
 
-	<link rel="stylesheet" type="text/css" href="index_tw.css"
+		<link rel="stylesheet" type="text/css" href="../notice/index_tw.css"
  	media="(min-width:661px)">
 
- 	<link rel="stylesheet" type="text/css" href="index_m.css" media="(max-width:660px)">
+ 	<link rel="stylesheet" type="text/css" href="../notice/index_m.css" media="(max-width:660px)">
 
  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -42,7 +42,7 @@
 
 			</div>
 			<div class="tr">
-				<span class="noticeNO stxt"><?php echo $noticeNO?></span>
+				<span class="noticeNO stxt"><?php echo $faqNO?></span>
 				<span class="title th"><?php echo $row['title']?></span>
 			</div>
 			<div class="tr">
@@ -60,9 +60,9 @@
 			<div class="tr"></div>
 			<div class="tr">
 				<?
-				$prevNO=$noticeNO+1;
+				$prevNO=$faqNO+1;
 	
-				$prev=mq("select title from notice where noticeNO='$prevNO'");
+				$prev=mq("select title from faq where faqNO='$prevNO'");
 				if($prev){
 					$prevRow=$prev->fetch_array();
 					$prevTitle=$prevRow['title'];
@@ -80,9 +80,9 @@
 			</div>
 			<div class="tr">
 				<?
-				$nextNO=$noticeNO-1;
+				$nextNO=$faqNO-1;
 	
-				$next=mq("select title from notice where noticeNO='$nextNO'");
+				$next=mq("select title from faq where faqNO='$nextNO'");
 				if($next){
 					$nextRow=$next->fetch_array();
 					$nextTitle=$nextRow['title'];

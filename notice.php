@@ -1,6 +1,6 @@
 <?php 
 
-	include "db.php";
+	include "notice/db.php";
 
   //페이지 관리 시작..
 
@@ -35,12 +35,25 @@
  <head>
  	<meta charset="utf-8">
  	<title>NOTICE</title>
- 	<link rel="stylesheet" type="text/css" href="index_tw.css"
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+  <link rel="stylesheet" type="text/css" href="index_w.css" media="(min-width:1296px)">
+
+  <link rel="stylesheet" type="text/css" href="index_t.css" media="(max-width:1295px)">
+
+  <link rel="stylesheet" type="text/css" href="index_m.css" media="(max-width:600px)">
+  
+ 	<link rel="stylesheet" type="text/css" href="notice/index_tw.css"
  	media="(min-width:661px)">
 
- 	<link rel="stylesheet" type="text/css" href="index_m.css" media="(max-width:660px)">
+ 	<link rel="stylesheet" type="text/css" href="notice/index_m.css" media="(max-width:660px)">
 
-  <link rel="stylesheet" type="text/css" href="../sy/zoo_write.css">
+  <link rel="stylesheet" type="text/css" href="sy/zoo_write.css">
+
+  <script src="index.js"></script>
+
+
 
  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -58,10 +71,18 @@
   	});
   </script>
 
- </head>
- <body>
+</head>
+<body>
 
- 	<div id="inner_page">
+<div id="page">
+
+  <?php 
+      include "header.php";
+      include "nav.php";
+  ?>  
+  
+
+ 	<article>
  		<h2>공지사항</h2>
 
 
@@ -75,9 +96,9 @@
 
  			<div id="show">
  				<ul>
- 					<li><a href="index.php?by=<?echo(0)?>" class="top" >최신순</a></li>
+ 					<li><a href="notice.php?by=<?echo(0)?>" class="top" >최신순</a></li>
  					<li class="top"><a href="#">|</a></li>
- 					<li class="top"><a href="index.php?by=<?echo(1)?>">조회수</a></li>
+ 					<li class="top"><a href="notice.php?by=<?echo(1)?>">조회수</a></li>
  				</ul>
  				
  			</div>
@@ -159,14 +180,14 @@
         <li class="page page_start"><a href="#">처음</a></li>
 
        <?}else{?>
-        <li class="page page_start"><a href="index.php?page=&list=<?=$list?>&by=<?=$by?>">처음</a></li>
+        <li class="page page_start"><a href="notice.php?page=&list=<?=$list?>&by=<?=$by?>">처음</a></li>
       <?}
 
       if($block <= 1){?><!-- block이 1보다 작거나 같으면 -->
       <!-- 거꾸로 못가니까 아무 표시도 안함. -->
 
       <?}else{?><!-- block이 1보다 크다면.. -->
-        <li class="page page_prev"><a href="index.php?page=<?=$b_start_page-1?>&list=<?=$list?>&by=<?=$by?>">이전</a></li>
+        <li class="page page_prev"><a href="notice.php?page=<?=$b_start_page-1?>&list=<?=$list?>&by=<?=$by?>">이전</a></li>
       <?}
 
       //$b_start_page를 $j의 초기값으로 설정
@@ -178,7 +199,7 @@
       ?>
         <li class="page current"><?=$j?></li><!-- 링크 걸지 않고 그냥 현재 페이지만 출력 -->
       <?}else{?><!-- 서로 다르다면.. -->
-        <li class="page"><a href="index.php?page=<?=$j?>&list=<?=$list?>&by=<?=$by?>"><?=$j?></a></li>
+        <li class="page"><a href="notice.php?page=<?=$j?>&list=<?=$list?>&by=<?=$by?>"><?=$j?></a></li>
         <?
         }
       }
@@ -189,21 +210,24 @@
       <!-- 맨 마지막 블럭이므로 다음 링크 버튼이 필요 없어서 보여주지 않는다. -->
 
       <?}else{?><!-- 그게 아니라면?!?!? -->
-        <li class="page page_next"><a href="index.php?page=<?=$b_end_page+1?>&list=<?=$list?>&by=<?=$by?>">다음</a></li>
+        <li class="page page_next"><a href="notice.php?page=<?=$b_end_page+1?>&list=<?=$list?>&by=<?=$by?>">다음</a></li>
       <?}
 
       if($pageNum >= $total_page){?>
         <li class="page page_end"><a href="#">끝</a></li>
       <?}else{?>
-        <li class="page page_end"><a href="index.php?page=<?=$total_page?>&
+        <li class="page page_end"><a href="notice.php?page=<?=$total_page?>&
           list=<?=$list?>&by=<?=$by?>">끝</a></li>
       <?}
 
       ?>
     </div>
- 	</div>
+ 	</article>
 
+  <?
+    include "footer.php";
+  ?>
 
- 
+ </div>
  </body>
  </html>

@@ -40,6 +40,15 @@ $(document).ready(function (){
 	// 	$(this).css('color','');
 	// });
 
+	$('ul#main_menu>li.comm').on('click',function(){
+		if($(this).is('.sub_li')===false){
+			$(this).children().eq(1).slideToggle(400);	
+		}
+		
+	});
+
+
+
 	$('nav #main_menu2 li a').on('click',function(){
 		$('div #black').fadeOut(600);
 		$('nav#mobile').fadeOut(400);

@@ -59,8 +59,7 @@ nav ul.lists{
 	text-indent: 15px;
 /*	display: none;*/
 }
-
-
+s
 .comm{
 	background-color: white;
 	line-height: 30px;
@@ -69,14 +68,21 @@ nav ul.lists{
 }
 
 article{
+	display: block;
 	width: 100%;
-	/*background-color: lightgreen;*/
-	min-height: 700px;
+	max-width: 992px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 0;
+	min-height: 650px;
 }
 
 #iframe{
 	display: block;
 	width: 100%;
+	max-width: 992px;
+	margin-right: auto;
+	margin-left: auto;
 	border: 0;
 	min-height: 650px;
 	/*background-color: blue;*/

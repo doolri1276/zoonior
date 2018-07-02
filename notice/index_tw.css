@@ -1,16 +1,17 @@
 *{padding: 0;margin: 0;}
 
-a{text-decoration: none;
-color: black;}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: #CF1B26;
+}
 
 li{
 	list-style: none;
 	display: inline;
-}
-
-div#inner_page{
-	padding: 15px;
-
 }
 
 h2{
@@ -33,6 +34,8 @@ h2{
 	padding-right: 10px;
 	padding-left: 10px;
 	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 
 #top>div{
@@ -64,10 +67,13 @@ div.list_table span{
 
 
 span.noticeNO{
+	display: inline-block;
 	width: 10%;
 }
 
 span.title{
+	display: inline-block;
+	text-align: left;
 	font-size: 0.9em;
 	width: 88%;
 }
@@ -263,4 +269,21 @@ label.cb{
 	width: 80px;
 }
 
+div.move_page{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
 
+span.info{
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.tel{
+	width: 70px;
+}
+
+
+input.email{
+	width: 120px;
+}

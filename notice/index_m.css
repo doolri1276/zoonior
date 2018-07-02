@@ -4,15 +4,16 @@
 a{text-decoration: none;
 color: black;}
 
+a:hover{
+	color: #CF1B26;
+}
+
+
 li{
 	list-style: none;
 	display: inline;
 }
 
-div#inner_page{
-	padding: 15px;
-
-}
 
 h2{
 	border: 1px solid #eee;
@@ -34,6 +35,8 @@ h2{
 	padding-right: 10px;
 	padding-left: 10px;
 	margin-bottom: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 #top>div{
@@ -80,6 +83,7 @@ span.noticeNO{
 }
 
 span.title{
+	text-align: left;
 	font-size: 0.9em;
 	width: 82.5%;
 }
@@ -221,4 +225,12 @@ label{
 
 label.cb{
 	width: 80px;
+}
+
+.tel{
+	width: 70px;
+}
+
+input.email{
+	width: 120px;
 }
